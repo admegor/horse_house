@@ -46,39 +46,7 @@ img {
 }
 
 .container {
-    max-width: 320px;
+    max-width: 1180px;
     margin: 0 auto;
-    padding: 0 16px;
-}
-
-.button--main {
-    display: block;
-    width: 100%;
-    background-color: $red-purple;
-    color: $white;
-    height: 48px;
-    border-radius: 24px;
-}
-
-.section-title__wrapper {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 40px;
-}
-
-.section-title {
-    margin: 0;
-    font-size: 16px;
-    line-height: 26px;
-    font-weight: 700;
-    color: $midnight;
-}
-
-.section-title__count {
-    margin: 0;
-    font-size: 24px;
-    line-height: 24px;
-    font-weight: 800;
-
-    color: $sand;
+    padding: 0 15px;
 }
