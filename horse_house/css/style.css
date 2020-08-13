@@ -531,3 +531,20 @@ img {
   margin: 0 auto;
   padding: 0 15px;
 }
+
+.control-arrow {
+  display: block;
+}
+
+.title-block {
+  display: block;
+}
+
+.title-block--subtitle {
+  display: block;
+}
+
+.blog__link,
+.events__link {
+  display: block;
+}

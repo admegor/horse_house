@@ -50,3 +50,24 @@ img {
     margin: 0 auto;
     padding: 0 15px;
 }
+
+// Стрелка ссылка
+.control-arrow {
+    display: block;
+}
+
+// Большой заголовок
+.title-block {
+    display: block;
+}
+
+// Малый заголовок
+.title-block--subtitle {
+    display: block;
+}
+
+// Ссылка узнать больше
+.blog__link,
+.events__link {
+    display: block;
+}
