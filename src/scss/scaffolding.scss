@@ -11,12 +11,12 @@ html {
 }
 
 body {
-    font-family: "Montserrat", "Arial", sans-serif;
-    font-size: 14px;
-    line-height: 20px;
-    font-weight: 500;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: 100%;
+    font-weight: 400;
     font-style: normal;
-    color: $main;
+    color: $dark;
 }
 
 img {
@@ -43,12 +43,28 @@ img {
     padding: 0;
     border: none;
     background: none;
+    text-decoration: none;
+}
+
+.button-main {
+    color: $red;
+    text-transform: uppercase;
+    padding: 20px 30px;
+    border: 2px $red solid;
+    transition: .2s;
+    animation: ease;
+}
+
+.button-main:hover {
+    background-color: $red;
+    color: $white;
 }
 
 .container {
     max-width: 1180px;
     margin: 0 auto;
     padding: 0 15px;
+    height: 100%;
 }
 
 // Стрелка ссылка
@@ -56,9 +72,21 @@ img {
     display: block;
 }
 
+.title-main {
+    font-family: "Playfair Display SC", Times, serif;
+    font-size: 64px;
+    line-height: 100%;
+    color: $white;
+    font-weight: 400;
+}
+
 // Большой заголовок
 .title-block {
     display: block;
+    margin: 0;
+    color: $red;
+    text-transform: uppercase;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
 
 // Малый заголовок
@@ -70,4 +98,15 @@ img {
 .blog__link,
 .events__link {
     display: block;
+}
+
+.paragraph--contrast {
+    color: $white;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 150%;
+}
+
+.about-us__text--fst {
+    font-weight: bold;
 }

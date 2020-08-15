@@ -461,18 +461,50 @@ th {
 }
 
 @font-face {
-  font-family: "Montserrat";
+  font-family: "Playfair Display SC";
   font-display: swap;
-  src: url("../fonts/Montserrat-ExtraBold.woff") format("woff"), url("../fonts/Montserrat-ExtraBold.woff2") format("woff2");
-  font-weight: 800;
+  src: url("../fonts/playfairdisplayscbold.woff") format("woff"), url("../fonts/playfairdisplayscbold.woff2") format("woff2");
+  font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Montserrat";
+  font-family: "Playfair Display SC";
   font-display: swap;
-  src: url("../fonts/Montserrat-Italic.woff") format("woff"), url("../fonts/Montserrat-Italic.woff2") format("woff2");
+  src: url("../fonts/playfairdisplaysc.woff") format("woff"), url("../fonts/playfairdisplaysc.woff2") format("woff2");
   font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-display: swap;
+  src: url("../fonts/Roboto-Regular.woff") format("woff"), url("../fonts/Roboto-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-display: swap;
+  src: url("../fonts/Roboto-Bold.woff") format("woff"), url("../fonts/Roboto-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-display: swap;
+  src: url("../fonts/Roboto-Black.woff") format("woff"), url("../fonts/Roboto-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-display: swap;
+  src: url("../fonts/Roboto-Medium.woff") format("woff"), url("../fonts/Roboto-Medium.woff2") format("woff2");
+  font-weight: 500;
   font-style: normal;
 }
 
@@ -491,10 +523,10 @@ html {
 }
 
 body {
-  font-family: "Montserrat", "Arial", sans-serif;
-  font-size: 14px;
-  line-height: 20px;
-  font-weight: 500;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 100%;
+  font-weight: 400;
   font-style: normal;
   color: #424242;
 }
@@ -524,20 +556,51 @@ img {
   padding: 0;
   border: none;
   background: none;
+  text-decoration: none;
+}
+
+.button-main {
+  color: #B41517;
+  text-transform: uppercase;
+  padding: 20px 30px;
+  border: 2px #B41517 solid;
+  -webkit-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s;
+  -webkit-animation: ease;
+          animation: ease;
+}
+
+.button-main:hover {
+  background-color: #B41517;
+  color: #FFFFFF;
 }
 
 .container {
   max-width: 1180px;
   margin: 0 auto;
   padding: 0 15px;
+  height: 100%;
 }
 
 .control-arrow {
   display: block;
 }
 
+.title-main {
+  font-family: "Playfair Display SC", Times, serif;
+  font-size: 64px;
+  line-height: 100%;
+  color: #FFFFFF;
+  font-weight: 400;
+}
+
 .title-block {
   display: block;
+  margin: 0;
+  color: #B41517;
+  text-transform: uppercase;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
 
 .title-block--subtitle {
@@ -547,4 +610,307 @@ img {
 .blog__link,
 .events__link {
   display: block;
+}
+
+.paragraph--contrast {
+  color: #FFFFFF;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+}
+
+.about-us__text--fst {
+  font-weight: bold;
+}
+
+.header {
+  position: absolute;
+  height: 110px;
+  width: 100%;
+}
+
+.header__inner {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__menu-button {
+  width: 44px;
+  height: 44px;
+  background-color: #FFFFFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header__menu-button:hover svg rect:first-child {
+  fill: #B41517;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
+.header__menu-button:hover svg rect:not(:nth-child(1)) {
+  fill: #FFFFFF;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
+.header__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
+.header__menu-map {
+  width: 44px;
+  height: 44px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #B41517;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
+.header__menu-map:hover svg path:nth-child(n) {
+  fill: #B41517;
+}
+
+.header__menu-map:hover {
+  background-color: #FFFFFF;
+}
+
+.hero {
+  height: 100vh;
+  background: url("../../img/bg header.jpg") no-repeat center 0;
+  background-size: cover;
+  margin-bottom: 80px;
+}
+
+.hero__wrapper-text {
+  padding-top: 15%;
+}
+
+.hero__title {
+  margin: 0;
+  font-family: "Playfair Display SC", Times, serif;
+  font-weight: 700;
+  color: #424242;
+  font-size: 64px;
+  line-height: 100%;
+  max-width: 450px;
+}
+
+.hero__subtitle {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+.about-us {
+  position: relative;
+  margin-bottom: 120px;
+}
+
+.about-us::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: -80px;
+  left: 0;
+  width: 100%;
+  height: 175%;
+  background: url("../../img/bg-horse-price.jpg") no-repeat center 0;
+  background-size: cover;
+}
+
+.about-us__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.about-us__video-box {
+  max-width: 670px;
+}
+
+.about-us__video {
+  width: 100%;
+}
+
+.about-us__text-box {
+  margin-top: 70px;
+  padding-left: 80px;
+  max-width: 459px;
+}
+
+.about-us__text-box-wrapper {
+  margin-bottom: 45px;
+  width: 460px;
+}
+
+.services__slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 80px;
+  position: relative;
+}
+
+.services__slider::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  background: url("../../img/arrow-left-disabled.svg") no-repeat center center;
+}
+
+.services__slider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 60px;
+  height: 60px;
+  background: url("../../img/arrow-right.svg") no-repeat center center;
+}
+
+.services__slider-item {
+  width: 320px;
+}
+
+.services__slider-box {
+  background-color: #FFFFFF;
+  height: 240px;
+  padding: 50px 44px;
+  -webkit-box-shadow: 0px 0px 43.7778px #C4C4C4;
+          box-shadow: 0px 0px 43.7778px #C4C4C4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.services__slider-title {
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.services__slider-subtitle {
+  margin: 0;
+}
+
+.services__slider-text-wrapper {
+  font-family: "Playfair Display SC", Times, serif;
+}
+
+.services__slider-price {
+  color: #B41517;
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 100%;
+}
+
+.services__slider-price {
+  margin: 0;
+}
+
+@media (max-width: 1000px) {
+  .about-us__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .about-us__video-box {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+}
+
+@media (max-width: 800px) {
+  .hero__title {
+    font-size: 40px;
+  }
+
+  .hero__subtitle {
+    font-size: 18px;
+    line-height: 100%;
+  }
+
+  .hero__wrapper-text {
+    padding-top: 35%;
+  }
+}
+
+@media (max-width: 700px) {
+  .hero {
+    height: 80%;
+    position: relative;
+    z-index: -1;
+  }
+
+  __wrapper {
+    position: relative;
+  }
+
+  __wrapper-text {
+    position: absolute;
+    bottom: -200px;
+    padding-top: 200px;
+  }
 }

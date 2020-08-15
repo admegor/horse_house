@@ -1,0 +1,55 @@
+.header {
+    position: absolute;
+    height: 110px;
+    width: 100%;
+}
+
+.header__inner {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+}
+
+.header__menu-button {
+    width: 44px;
+    height: 44px;
+    background-color: $white;
+    display: flex;
+}
+
+.header__menu-button:hover svg rect:first-child {
+    fill: $red;
+    transition: .3s;
+}
+
+.header__menu-button:hover svg rect:not(:nth-child(1)) {
+    fill: $white;
+    transition: .3s;
+}
+
+.header__menu {
+    display: flex;
+    align-items: center;
+    transition: .3s;
+}
+
+.header__menu-map {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $red;
+    transition: .3s;
+}
+
+.header__menu-map:hover svg path:nth-child(n) {
+    fill: $red;
+}
+
+.header__menu-map:hover {
+    background-color: $white;
+}
+

@@ -1,0 +1,57 @@
+.about-us {
+    position: relative;
+    margin-bottom: 120px;
+
+    &::before {
+        content: "";
+        z-index: -1;
+        position: absolute;
+        top: -80px;
+        left: 0;
+        
+        width: 100%;
+        height: 175%;
+    
+        background: url("../../img/bg-horse-price.jpg") no-repeat center 0; 
+        background-size: cover;
+    }
+    
+    &__wrapper {
+        display: flex;
+    }
+
+    &__video-box {
+        max-width: 670px;
+    }
+
+    &__video {
+        width: 100%;
+    
+    }
+
+    &__text-box {
+        margin-top: 70px;
+        padding-left: 80px;
+        max-width: 459px;
+    }
+
+    &__text-box-wrapper {
+        margin-bottom: 45px;
+        width: 460px;
+    }
+
+}
+
+@media (max-width: 1000px) {
+    .about-us__wrapper {
+        flex-direction: column;
+    }
+
+    .about-us__video-box {
+        order: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-grow: 1;
+    }
+}
