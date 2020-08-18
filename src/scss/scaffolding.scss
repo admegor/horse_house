@@ -9,7 +9,6 @@ html {
 *::after {
     box-sizing: inherit;
 }
-
 body {
     font-family: "Roboto", Arial, Helvetica, sans-serif;
     font-size: 18px;
@@ -44,6 +43,7 @@ img {
     border: none;
     background: none;
     text-decoration: none;
+    display: inline-block;
 }
 
 .button-main {
@@ -109,4 +109,10 @@ img {
 
 .about-us__text--fst {
     font-weight: bold;
+}
+
+.control-arrow {
+    background: url('../img/icon-control-arrow.svg') no-repeat center center;
+    width: 28px;
+    height: 19px;
 }

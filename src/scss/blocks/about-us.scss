@@ -22,6 +22,24 @@
 
     &__video-box {
         max-width: 670px;
+        max-height: 433px;
+        cursor: pointer;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+
+            top: 50%;
+            left: 50%;
+            margin-left: -50px;
+            margin-top: -50px;
+
+            width: 100px;
+            height: 100px;
+
+            background: url("../../img/icon-play.svg") no-repeat center center;
+        }
     }
 
     &__video {
@@ -42,16 +60,31 @@
 
 }
 
-@media (max-width: 1000px) {
-    .about-us__wrapper {
-        flex-direction: column;
+@media (max-width: 1300px) {
+    .about-us__text-box-wrapper {
+        width: auto;
     }
+}
 
-    .about-us__video-box {
-        order: 2;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-grow: 1;
+@media (max-width: 1000px) {
+
+    .about-us {
+        &::before {
+            top: -280px;
+        }
+        &__wrapper {
+            flex-direction: column;
+        }
+    
+        &__video-box {
+            order: 2;            
+            margin: 0 auto;
+        }
+        
+        &__text-box {
+            margin: 0 auto;
+            margin-bottom: 20px;
+            padding-left: 0;
+        }
     }
 }

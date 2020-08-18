@@ -3,6 +3,7 @@
     background: url("../../img/bg\ header.jpg") no-repeat center 0;
     background-size: cover;
     margin-bottom: 80px;
+    
 
     &__wrapper-text {
         padding-top: 15%;
@@ -47,19 +48,22 @@
 
 @media (max-width: 700px) {
     .hero {
-        height: 80%;
+        height: 450px;
         position: relative;
         z-index: -1;
+        margin-bottom: 230px;
+        
+
+        &__wrapper {
+            position: relative;
+        }
+    
+        &__wrapper-text {
+            position: absolute;
+            bottom: -150px;
+        }
     }
 
-    &__wrapper {
-        position: relative;
-    }
-
-    &__wrapper-text {
-        position: absolute;
-        bottom: -200px;
-        padding-top: 200px;
-    }
+    
 }
 
