@@ -80,18 +80,29 @@ img {
     font-weight: 400;
 }
 
-// Большой заголовок
-.title-block {
+@media (max-width: 800px) {
+    .title-main {
+        font-size: 48px;
+    }
+}
+
+// Большой и малый заголовок
+.title-block,
+.title-block--subtitle {
     display: block;
     margin: 0;
     color: $red;
     text-transform: uppercase;
     font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-weight: 400;
 }
 
-// Малый заголовок
-.title-block--subtitle {
-    display: block;
+
+@media (max-width: 800px) {
+    .title-block,
+    .title-block--subtitle {
+        font-size: 21px;
+    }
 }
 
 // Ссылка узнать больше
@@ -106,13 +117,17 @@ img {
     font-size: 18px;
     line-height: 150%;
 }
+@media (max-width: 800px) {
+    .paragraph--contrast {
+        font-size: 14px;
+    }
+}
 
 .about-us__text--fst {
     font-weight: bold;
 }
 
-.control-arrow {
-    background: url('../img/icon-control-arrow.svg') no-repeat center center;
-    width: 28px;
-    height: 19px;
+.control-arrow {    
+    width: 32px;
+    height: 32px;
 }
