@@ -6,7 +6,7 @@
         padding: 0 80px;
         position: relative;
         min-width: 0;
-        margin-bottom: 80px;
+        margin-bottom: 40px;
     }
 
 
@@ -147,25 +147,48 @@
     height: 60px;
     border: none;
 }
+@media (max-width: 800px) {
+    .services__slider .slick-arrow {
+        width: 40px;
+        height: 40px;
+    }
+}
 /* Стрелка влево */
 .services__slider .slick-arrow.slick-prev {
     left: 0;    
-    background: url("../../img/arrow-right.svg") no-repeat center center;
+    background: url("../../img/arrow-left.svg") no-repeat center center;
+    background-size: cover;
 }
 /* Стрелка вправо */
 .services__slider .slick-arrow.slick-next {
     right: 0;  
     background: url("../../img/arrow-right.svg") no-repeat center center;
+    background-size: cover;
 }
 
 .services__slider .slick-arrow.slick-next:hover {
     background: url("../../img/arrow-right-hover.svg");
+    background-size: cover;
 }
-.services__slider .slick-arrow.slick-disabled,
-.services__slider .slick-arrow.slick-disabled:hover {
-    background: url("../../img/arrow-left-disabled.svg") no-repeat center center;
-    // transform: rotate(0deg);
+
+.services__slider .slick-arrow.slick-prev:hover  {
+    background: url("../../img/arrow-left-hover.svg") no-repeat center center;   
+    background-size: cover; 
+
 }
+
+.services__slider .slick-prev.slick-disabled,
+.services__slider .slick-prev.slick-disabled:hover {
+    background: url("../../img/arrow-left-disabled.svg") no-repeat center center;   
+    background-size: cover; 
+}
+
+.services__slider .slick-next.slick-disabled,
+.services__slider .slick-next.slick-disabled:hover {
+    background: url("../../img/arrow-right-disabled.svg") no-repeat center center;    
+    background-size: cover;
+}
+
 
 
 @media (max-width: 480px) {

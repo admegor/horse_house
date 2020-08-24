@@ -812,7 +812,7 @@ img {
   padding: 0 80px;
   position: relative;
   min-width: 0;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
 }
 
 .services__slider-item {
@@ -966,7 +966,8 @@ img {
 
 .services__slider .slick-arrow.slick-prev {
   left: 0;
-  background: url("../../img/arrow-right.svg") no-repeat center center;
+  background: url("../../img/arrow-left.svg") no-repeat center center;
+  background-size: cover;
 }
 
 /* Стрелка вправо */
@@ -974,15 +975,29 @@ img {
 .services__slider .slick-arrow.slick-next {
   right: 0;
   background: url("../../img/arrow-right.svg") no-repeat center center;
+  background-size: cover;
 }
 
 .services__slider .slick-arrow.slick-next:hover {
   background: url("../../img/arrow-right-hover.svg");
+  background-size: cover;
 }
 
-.services__slider .slick-arrow.slick-disabled,
-.services__slider .slick-arrow.slick-disabled:hover {
+.services__slider .slick-arrow.slick-prev:hover {
+  background: url("../../img/arrow-left-hover.svg") no-repeat center center;
+  background-size: cover;
+}
+
+.services__slider .slick-prev.slick-disabled,
+.services__slider .slick-prev.slick-disabled:hover {
   background: url("../../img/arrow-left-disabled.svg") no-repeat center center;
+  background-size: cover;
+}
+
+.services__slider .slick-next.slick-disabled,
+.services__slider .slick-next.slick-disabled:hover {
+  background: url("../../img/arrow-right-disabled.svg") no-repeat center center;
+  background-size: cover;
 }
 
 @media (max-width: 1300px) {
@@ -1014,6 +1029,14 @@ img {
     margin: 0 auto;
     margin-bottom: 20px;
     padding-left: 0;
+  }
+
+  .about-us__text-box-wrapper {
+    margin-bottom: 25px;
+  }
+
+  .about-us__text-box {
+    margin-bottom: 45px;
   }
 }
 
@@ -1053,6 +1076,11 @@ img {
 
   .hero__wrapper-text {
     padding-top: 35%;
+  }
+
+  .services__slider .slick-arrow {
+    width: 40px;
+    height: 40px;
   }
 }
 
