@@ -1,0 +1,33 @@
+.horse {
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        padding-bottom: 30px;
+    }
+
+    &__control {
+        position: absolute;
+        left: 50%;
+        bottom: -10px;
+        display: flex;
+        align-items: center;
+        width: 65px;
+        justify-content: space-between;
+    }
+
+    &__image-wrapper {
+        width: 669px;
+        height: 433px;
+        position: relative;
+    }
+
+    &__info {
+        max-width: 490px;
+        align-self: center;
+    }
+
+    &__name {
+        margin-bottom: 35px;
+    }
+}
