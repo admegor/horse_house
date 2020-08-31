@@ -1,27 +1,26 @@
 .horse {
+    padding-bottom: 85px;
     &__inner {
         display: flex;
         justify-content: space-between;
-        position: relative;
         padding-bottom: 30px;
+        
     }
-
+    
+    &__image-wrapper {
+        max-width: 669px;
+        position: relative;
+    }
+    
     &__control {
         position: absolute;
-        left: 50%;
-        bottom: -10px;
+        left: 0;
+        bottom: -35px;
         display: flex;
         align-items: center;
         width: 65px;
         justify-content: space-between;
     }
-
-    &__image-wrapper {
-        width: 669px;
-        height: 433px;
-        position: relative;
-    }
-
     &__info {
         max-width: 490px;
         align-self: center;
@@ -29,5 +28,21 @@
 
     &__name {
         margin-bottom: 35px;
+    }
+}
+
+@media (max-width: 912px) {
+    .horse {
+        &__inner {
+            flex-direction: column;
+        }
+
+        &__image-wrapper {
+            align-self: center;
+        }
+
+        &__info {
+            margin-bottom: 25px;
+        }
     }
 }
