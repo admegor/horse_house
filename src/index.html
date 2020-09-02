@@ -23,10 +23,14 @@
         <section class="about-us">
             <div class="container">
                 <div class="about-us__wrapper">
-                    <div class="about-us__video-box js-videoWrapper">                                                                                                   
-                        <iframe class="about-us__videoIframe js-videoIframe" width="560" height="315" data-src="https://www.youtube.com/embed/SdCwphyYCJc?autoplay=1&modestbranding=1&rel=0&hl=ru&showinfo=0&color=white" src="" frameborder="0" allowTransparency="true" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        <button class="about-us__videoPoster js-videoPoster">123</button>  
-                    </div>                 
+                    <div class="about-us__video-box-wrapper">
+                        <div class="about-us__video-box js-videoWrapper">
+                            <iframe class="about-us__videoIframe js-videoIframe" width="560" height="315" data-src="https://www.youtube.com/embed/SdCwphyYCJc?autoplay=1&modestbranding=1&rel=0&hl=ru&showinfo=0&color=white" src="" frameborder="0" allowTransparency="true" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <button class="about-us__videoPoster js-videoPoster">
+                                <div class="button-play"></div>
+                            </button>  
+                        </div>
+                    </div>
                     <div class="about-us__text-box">
                         <div class="about-us__text-box-wrapper">
                             <h2 class="title-block title-block--subtitle">О нас</h2>
@@ -176,16 +180,20 @@
         <section class="horse">
             <div class="container">
                 <div class="horse__inner">
-                    <div class="horse__info">
-                        <h2 class="title-block title-block--subtitle">Наши лошади</h2>
-                        <h3 class="title-block--alt horse__name">Мелиса</h3>
-                        <p class="paragraph">Лошадь на протяжении веков была верным 
-                            спутником человека, его верным другом и помощником.
-                            Лошадь – верный спутник человека.</p>
-                        <a class="horse__button button button-main" href="#">Подробнее</a>
-                    </div>
-                    <div class="horse__image-wrapper">
-                        <img class="horse__image" src="img/horse-Melisa.jpg" alt="Мелиса">
+                    <div class="horse__slider">
+                        <div class="horse__slider-item">
+                            <div class="horse__info">
+                                <h2 class="title-block title-block--subtitle">Наши лошади</h2>
+                                <h3 class="title-block--alt horse__name">Мелиса</h3>
+                                <p class="paragraph">Лошадь на протяжении веков была верным 
+                                    спутником человека, его верным другом и помощником.
+                                    Лошадь – верный спутник человека.</p>
+                                <a class="horse__button button button-main" href="#">Подробнее</a>
+                            </div>
+                            <div class="horse__image-wrapper">
+                                <img class="horse__image" src="img/horse-Melisa.jpg" alt="Мелиса">
+                            </div>
+                        </div>
                         <div class="horse__control">
                             <div class="horse__control--prev">
                                 <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -231,27 +239,29 @@
             <div class="container">
                 <div class="feedback__inner">
                     <h2 class="title-block--alt">Ваши отзывы</h2>
-                    <blockquote class="feedback__text">«Всем всем рекомендую пообщаться с красивыми и умными животными! Очень воспитанные и ухоженные лошадки! 
-                        Приятные чувства останутся со всеми - кто ездит и общается с животными.также - доброжелательные девушки, 
-                        всё помогут и подскажут!»
-                    </blockquote>
-                    <div class="feedback__userinfo">
-                        <div class="feedback__avatar">
-                            <img class="feedback__avatar-image" src="img/feedback-user-1.png" alt="">
-                        </div>
-                        <div class="feedback__user">
-                            <p class="feedback__username">Станислав Шуда</p>
-                            <div class="feedback__social">
-                                <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <g clip-path="url(#clip0)">
-                                    <path d="M13.5099 8.40466C13.2657 8.09903 13.3356 7.96305 13.5099 7.68985C13.513 7.68673 15.5282 4.92602 15.7359 3.98978L15.7371 3.98915C15.8403 3.64796 15.7371 3.39722 15.2382 3.39722H13.5873C13.167 3.39722 12.9732 3.61241 12.8694 3.85318C12.8694 3.85318 12.0288 5.84792 10.8397 7.14095C10.4559 7.51457 10.2785 7.63433 10.069 7.63433C9.96577 7.63433 9.80533 7.51457 9.80533 7.17338V3.98915C9.80533 3.57997 9.68768 3.39722 9.33975 3.39722H6.74381C6.48019 3.39722 6.32352 3.58808 6.32352 3.76585C6.32352 4.15382 6.91809 4.24302 6.97974 5.33458V7.70295C6.97974 8.2219 6.88474 8.31734 6.67397 8.31734C6.11275 8.31734 4.75061 6.31448 3.94339 4.02221C3.78043 3.57748 3.62125 3.39784 3.19782 3.39784H1.54626C1.07502 3.39784 0.980011 3.61303 0.980011 3.8538C0.980011 4.2792 1.54123 6.39432 3.58979 9.18871C4.95509 11.0961 6.87782 12.1297 8.6269 12.1297C9.67824 12.1297 9.80659 11.9001 9.80659 11.5053C9.80659 9.68272 9.71159 9.51057 10.2382 9.51057C10.4823 9.51057 10.9026 9.63033 11.8841 10.5504C13.0059 11.6413 13.1903 12.1297 13.8182 12.1297H15.4691C15.9397 12.1297 16.1782 11.9001 16.041 11.4473C15.727 10.4948 13.6055 8.53565 13.5099 8.40466Z" fill="#4A76A8"/>
-                                    </g>
-                                    <defs>
-                                    <clipPath id="clip0">
-                                    <rect width="15.1" height="14.9699" fill="white" transform="translate(0.980011 0.278564)"/>
-                                    </clipPath>
-                                    </defs>
-                                </svg>
+                    <div class="feedback__blockquote-wrapper">
+                        <blockquote class="feedback__text">«Всем всем рекомендую пообщаться с красивыми и умными животными! Очень воспитанные и ухоженные лошадки! 
+                            Приятные чувства останутся со всеми - кто ездит и общается с животными.также - доброжелательные девушки, 
+                            всё помогут и подскажут!»
+                        </blockquote>
+                        <div class="feedback__userinfo">
+                            <div class="feedback__avatar">
+                                <img class="feedback__avatar-image" src="img/feedback-user-1.png" alt="">
+                            </div>
+                            <div class="feedback__user">
+                                <p class="feedback__username">Станислав Шуда</p>
+                                <div class="feedback__social">
+                                    <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0)">
+                                        <path d="M13.5099 8.40466C13.2657 8.09903 13.3356 7.96305 13.5099 7.68985C13.513 7.68673 15.5282 4.92602 15.7359 3.98978L15.7371 3.98915C15.8403 3.64796 15.7371 3.39722 15.2382 3.39722H13.5873C13.167 3.39722 12.9732 3.61241 12.8694 3.85318C12.8694 3.85318 12.0288 5.84792 10.8397 7.14095C10.4559 7.51457 10.2785 7.63433 10.069 7.63433C9.96577 7.63433 9.80533 7.51457 9.80533 7.17338V3.98915C9.80533 3.57997 9.68768 3.39722 9.33975 3.39722H6.74381C6.48019 3.39722 6.32352 3.58808 6.32352 3.76585C6.32352 4.15382 6.91809 4.24302 6.97974 5.33458V7.70295C6.97974 8.2219 6.88474 8.31734 6.67397 8.31734C6.11275 8.31734 4.75061 6.31448 3.94339 4.02221C3.78043 3.57748 3.62125 3.39784 3.19782 3.39784H1.54626C1.07502 3.39784 0.980011 3.61303 0.980011 3.8538C0.980011 4.2792 1.54123 6.39432 3.58979 9.18871C4.95509 11.0961 6.87782 12.1297 8.6269 12.1297C9.67824 12.1297 9.80659 11.9001 9.80659 11.5053C9.80659 9.68272 9.71159 9.51057 10.2382 9.51057C10.4823 9.51057 10.9026 9.63033 11.8841 10.5504C13.0059 11.6413 13.1903 12.1297 13.8182 12.1297H15.4691C15.9397 12.1297 16.1782 11.9001 16.041 11.4473C15.727 10.4948 13.6055 8.53565 13.5099 8.40466Z" fill="#4A76A8"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0">
+                                        <rect width="15.1" height="14.9699" fill="white" transform="translate(0.980011 0.278564)"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                </div>
                             </div>
                         </div>
                     </div>

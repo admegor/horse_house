@@ -1,10 +1,14 @@
 .horse {
     padding-bottom: 85px;
-    &__inner {
+
+    @media (max-width: 800px) {
+        padding-bottom: 40px;
+    }
+    &__slider-item {
         display: flex;
         justify-content: space-between;
         padding-bottom: 30px;
-        
+        position: relative;        
     }
     
     &__image-wrapper {
@@ -33,7 +37,7 @@
 
 @media (max-width: 912px) {
     .horse {
-        &__inner {
+        &__slider {
             flex-direction: column;
         }
 
