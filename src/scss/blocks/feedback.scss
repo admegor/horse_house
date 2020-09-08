@@ -6,6 +6,10 @@
         margin-left: 80px;
     }
 
+    &__inner {
+        padding: 0 100px;
+    }
+
     &__inner .title-block--alt {
         margin-bottom: 45px;
     }
@@ -52,5 +56,25 @@
     
     &__username {
         margin-bottom: 6px;
+    }
+}
+
+@media (max-width: 800px) {
+    .feedback__blockquote-wrapper {
+        margin-left: 40px;
+    }
+    .feedback__inner {
+        padding: 0 30px;
+    }
+
+    .feedback__text::before {
+        left: -35px;
+    }
+}
+
+
+@media (max-width: 500px) {
+    .feedback__inner {
+        padding: 0;
     }
 }

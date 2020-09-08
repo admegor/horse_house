@@ -21,7 +21,7 @@ $(document).ready(function() {
 
     $('.services__slider').slick({
         arrows: true,
-        slidesToShow: 3,        
+        slidesToShow: 3,
         slidesToScroll: 1,
         infinite: false,
         responsive: [
@@ -39,9 +39,27 @@ $(document).ready(function() {
             slidesToScroll: 1
           }
         }
-  ]
-        
+      ]
     });
+
+    $('.horse__slider').slick({
+      arrows: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      infinite: false,
+      fade: true,
+      cssEase: 'linear',
+  });
+
+    $('.gallery__slider').slick({
+      centerMode: true,
+      centerPadding: '60px',
+      arrows: false,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      variableWidth: true,
+      adaptiveHeight: true
+  });
 });;
 $(document).on('click','.about-us__videoPoster',function(e) {
     e.preventDefault();

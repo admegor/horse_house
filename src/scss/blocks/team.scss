@@ -8,6 +8,9 @@
     
     &__inner {
         display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        max-height: 270px;
         justify-content: space-between;
     }
 
@@ -27,26 +30,29 @@
     }
 }
 
-@media (max-width: 1040px) {
+@media (max-width: 1180px) {
     .team {
         &__inner {
             flex-direction: column;
+            max-height: inherit;
         }
 
         &__info {
             order: 1;
             align-self: flex-start;
-            margin-bottom: 20px;
         }
 
         &__photos {
             order: 2;
             justify-content: center;
             flex-wrap: wrap;
+            margin-bottom: 35px;
         }
 
-        &__photo {
-            margin-bottom: 10px;
+        &__button-wrapper {
+            order: 3;
+            display: flex;
+            justify-content: center;
         }
     }
 }

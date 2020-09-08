@@ -4,30 +4,31 @@
     @media (max-width: 800px) {
         padding-bottom: 40px;
     }
+
+    &__slider {
+        position: relative;
+    }
+
     &__slider-item {
         display: flex;
         justify-content: space-between;
         padding-bottom: 30px;
-        position: relative;        
+        position: relative;
     }
     
     &__image-wrapper {
         max-width: 669px;
         position: relative;
+        margin-left: 10px;
     }
-    
-    &__control {
-        position: absolute;
-        left: 0;
-        bottom: -35px;
-        display: flex;
-        align-items: center;
-        width: 65px;
-        justify-content: space-between;
-    }
+
     &__info {
         max-width: 490px;
         align-self: center;
+    }
+
+    &__info .paragraph {
+        margin-bottom: 35px;
     }
 
     &__name {
@@ -37,10 +38,6 @@
 
 @media (max-width: 912px) {
     .horse {
-        &__slider {
-            flex-direction: column;
-        }
-
         &__image-wrapper {
             align-self: center;
         }
@@ -49,4 +46,54 @@
             margin-bottom: 25px;
         }
     }
+}
+
+@media (max-width: 800px) {
+    .horse__slider-item {
+        flex-direction: column;
+    }
+}
+
+
+.horse__slider .slick-list {
+    min-width: 0;
+    overflow: hidden;
+}
+
+.horse__slider .slick-track {
+    display: flex;
+    min-width: 0;
+}
+
+.horse__slider .slick-arrow {
+    position: absolute;
+    bottom: -20px;
+    left: 42.8%;
+    width: 28px;
+    height: 19px;
+    font-size: 0;
+    border: none;
+}
+
+.horse__slider .slick-arrow.slick-prev {
+    background: url("../../img/arrow-thin-left.svg") no-repeat center center;
+    background-size: cover;
+}
+
+.horse__slider .slick-arrow.slick-next {
+    margin-left: 35px;
+    background: url("../../img/arrow-thin-right.svg") no-repeat center center;
+    background-size: cover;
+}
+
+.horse__slider .slick-prev.slick-disabled,
+.horse__slider .slick-prev.slick-disabled:hover {
+    background: url("../../img/arrow-thin-left-disabled.svg") no-repeat center center;   
+    background-size: cover; 
+}
+
+.horse__slider .slick-next.slick-disabled,
+.horse__slider .slick-next.slick-disabled:hover {
+    background: url("../../img/arrow-thin-right-disabled.svg") no-repeat center center;    
+    background-size: cover;
 }
