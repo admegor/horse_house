@@ -279,8 +279,7 @@
 
         <section class="gallery">
             <div class="container">
-                <h2 class="title-block--alt">Галерея</h2>
-                <a class="gallery__button button" href="#">Узнать больше</a>
+                <h2 class="title-block--alt gallery__title">Галерея</h2>
             </div>
             <div class="gallery__slider">
                 <img class="gallery__item" src="img/slider-gallery/gallery-image-4.jpg" alt="">
@@ -292,16 +291,25 @@
                 <img class="gallery__item" src="img/slider-gallery/gallery-image-6.jpg" alt="">
                 <img class="gallery__item" src="img/slider-gallery/gallery-image-7.jpg" alt="">                    
             </div>
+            <div class="container">
+                <div class="gallery__button-wrapper">
+                    <a class="gallery__button button button-main" href="#">Узнать больше</a>
+                </div>
+            </div>
         </section>
 
         <section class="events">
             <div class="container">
                 <div class="events__inner">
-                    <p class="title-block--subtitle">ближайшие</p>
-                    <h2 class="title-block--alt">Мероприятия</h2>
+                    <div class="events__title-wrapper">
+                        <p class="title-block--subtitle">ближайшие</p>
+                        <h2 class="title-block--alt">Мероприятия</h2>
+                    </div>
                     <div class="events__content">
-                        <div class="events__item events__item--last">
-                            <img class="events__item-image" src="img/events/event-1.jpg" alt="">
+                        <div class="events__item">
+                            <div class="events__item-image-wrapper">
+                                <div class="events__item-image-inner" style="background-image: url(img/events/event-1.jpg);"></div>
+                            </div>
                             <div class="events__item-box">
                                 <time datetime="2020-06-05">июнь 5, 2020</time>
                                 <p class="events__item-text">
@@ -311,37 +319,56 @@
                                 </p>
                                 <a class="control-arrow" href="#"></a>
                             </div>
+                        </div>
                         <div class="events__item">
-                            <img class="events__item-image" src="img/events/event-1.jpg" alt="">
-                            <div class="events__item-box">
-                                <time datetime="2020-06-05">июнь 5, 2020</time>
-                                <p class="events__item-text">
-                                    Конные прогулки 
-                                    на лошадях и пони 
-                                </p>
-                                <a class="control-arrow" href="#"></a>
+                            <div class="events__item-image-wrapper">
+                                <div class="events__item-image-inner" style="background-image: url(img/events/event-2.jpg);"></div>
                             </div>
-                        <div class="events__item events__item--last">
-                            <img class="events__item-image" src="img/events/event-1.jpg" alt="">
-                            <div class="events__item-box">
-                                <time datetime="2020-06-05">июнь 5, 2020</time>
-                                <p class="events__item-text">
-                                    По берегу черного моря 
-                                    с купанием лошадей
-                                </p>
-                                <a class="control-arrow" href="#"></a>
+                            <div class="events__item-inner">
+                                <div class="events__item-box">
+                                    <time datetime="2020-06-05">июнь 5, 2020</time>
+                                    <p class="events__item-text">
+                                        Конные прогулки 
+                                        на лошадях и пони 
+                                    </p>
+                                    <a class="control-arrow" href="#"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="events__item">
+                            <div class="events__item-image-wrapper">
+                                <div class="events__item-image-inner" style="background-image: url(img/events/event-3.jpg);"></div>
+                            </div>
+                            <div class="events__item-inner">
+                                <div class="events__item-box">
+                                    <time datetime="2020-06-05">июнь 5, 2020</time>
+                                    <p class="events__item-text">
+                                        По берегу черного моря 
+                                        с купанием лошадей
+                                    </p>
+                                    <a class="control-arrow" href="#"></a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <a class="events__link" href="#">узнать больше</a>
                 </div>
+                <a class="events__link button button-categories link link--arrowed" href="#">узнать больше
+                    <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                        <g fill="none" stroke="#B41517" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="10">
+                          <circle class="arrow-icon--circle" cx="16" cy="16" r="15.12"></circle>
+                          <path class="arrow-icon--arrow" d="M16.14 9.93L22.21 16l-6.07 6.07M8.23 16h13.98"></path>
+                        </g>
+                    </svg>
+                </a>
             </div>
         </section>
 
         <section class="blog">
             <div class="container">
                 <div class="blog__inner">
-                    <h2 class="title-block--alt">Записи из блога</h2>
+                    <div class="blog__title-block-wrapper">
+                        <h2 class="title-block--alt">Записи из блога</h2>
+                    </div>
                     <div class="blog__content-wrap">
                         <ul class="blog__list">
                             <li class="blog__item">
@@ -377,26 +404,35 @@
                                 </a>
                             </li>
                         </ul>
-                        <a class="blog__link" href="#">Все записи</a>
+                        <a class="blog__link button button-categories link link--arrowed" href="#">Все записи
+                            <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                                <g fill="none" stroke="#B41517" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="10">
+                                  <circle class="arrow-icon--circle" cx="16" cy="16" r="15.12"></circle>
+                                  <path class="arrow-icon--arrow" d="M16.14 9.93L22.21 16l-6.07 6.07M8.23 16h13.98"></path>
+                                </g>
+                            </svg>
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
 
         <section class="questions">
+            <h2 class="visually-hidden">Обратная связь</h2>
             <div class="container">
                 <div class="questions__inner">
-                    <h2 class="visually-hidden">Обратная связь</h2>
-                    <p class="title-block--alt">у вас есть вопросы?</p>
-                    <div class="questions__button button">заказать звонок</div>
+                    <div class="questions__content">
+                        <p class="title-block--alt">у вас<br> есть вопросы?</p>
+                        <a class="questions__button button button-main" href="#">заказать звонок</a>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="map">
+        <section class="map" id="map">
             <div class="container">
                 <div class="map__inner">
-                    <img class="map__image" src="img/map.jpg" alt="">
+                    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab8e4705495d2706ecd94eef4546f8862a246c52454098305972f7e3520768bd8&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
                 </div>
             </div>
         </section>

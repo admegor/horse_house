@@ -74,4 +74,32 @@ $(document).on('click','.about-us__videoPoster',function(e) {
     wrapper.addClass('videoWrapperActive');
     iframe.attr('src',src);
   };
+$(document).ready(function(){
+    $("#mapBtn").on("click","a", function (event) {
+        //отменяем стандартную обработку нажатия по ссылке
+        event.preventDefault();
+
+        //забираем идентификатор бока с атрибута href
+        var id  = $(this).attr('href'),
+
+            //узнаем высоту от начала страницы до блока на который ссылается якорь
+            top = $(id).offset().top;
+
+        //анимируем переход на расстояние - top за 1500 мс
+        $('body,html').animate({scrollTop: top}, 1500);
+    });
+});
+;
+let menuBtn = document.querySelector('.header__menu-button');
+let menuNav = document.querySelector('.header__nav-wrapper');
+let menuList = document.querySelector('.header__nav');
+let menuBurger = document.querySelector('.header__menu-burger');
+let bodySite = document.body;
+
+menuBtn.onclick = function() {
+    menuNav.classList.toggle('header__nav-wrapper--show');
+    menuBurger.classList.toggle('active');
+    menuList.classList.toggle('active');
+    bodySite.classList.toggle('lock');
+};;
 

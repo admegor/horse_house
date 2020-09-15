@@ -1,0 +1,18 @@
+.map {
+    &__inner {
+        height: 520px;
+        padding: 15px;
+        background-color: $white
+    }
+    padding-bottom: 100px;
+}
+
+@media (max-width: 600px) {
+    .map {
+        padding-bottom: 50px;
+    }
+    .map__inner {
+        padding: 5px;
+        height: 350px;
+    }
+}

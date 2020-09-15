@@ -1,4 +1,18 @@
 .gallery {
+    padding: 70px 0;
+
+    &__title {
+        margin-bottom: 66px;
+        text-align: center;
+    }
+
+    &__slider {
+        margin-bottom: 65px;
+    }
+
+    &__button-wrapper {
+        text-align: center;
+    }
 }
 
 
@@ -9,21 +23,25 @@
     outline: none;
 }
 
-.gallery__slider .slick-cloned {
+.gallery__slider .slick-slide {
     opacity: 0;
 }
 
-.gallery__slider .slick-active,
-.gallery__slider .slick-slide {
+
+.gallery__slider .slick-active {
     transform: scale(0.8);
     transition: all ease .5s;
     outline: none;
     opacity: 1;
 }
 
+.gallery__slider .slick-cloned {
+    opacity: 0;
+}
 .gallery__slider .slick-active {
     transform: translateX(80px) scale(0.8);
     transition: all ease .5s;
+    opacity: 1;
 }
 .gallery__slider .slick-center {
     transform: scale(1);

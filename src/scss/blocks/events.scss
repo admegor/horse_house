@@ -1,0 +1,213 @@
+.events {
+    padding-top: 50px;
+    padding-bottom: 114px;
+
+    &__title-wrapper {
+        text-align: center;
+        margin-bottom: 80px;
+    }
+
+    &__inner {
+        margin-bottom: 35px;
+    }
+
+    &__link {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    
+    &__content {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: 370px;
+        justify-content: space-between;
+        align-content: space-between;
+        overflow-x: hidden;
+    }
+
+    &__item {
+        width: 318px;
+        height: 169px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+
+        position: relative;
+
+        
+        &:first-child {
+            width: 779px;
+            height: 370px;
+            box-shadow: 0px 0px 49px rgba(226, 226, 226, 0.7);
+        }
+    }
+    
+    &__item-image-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    
+    &__item-inner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        height: 100%;
+        color: $white;
+        opacity: 1;
+    }
+    
+    &__item-image-wrapper::before {
+        position: absolute;
+        content: "";
+
+        width: 100%;
+        height: 100%;
+
+        top: 0;
+        left: 0;
+
+        background-color: #3D2B2B;
+        opacity: 0.65;
+    }
+
+    &__item &__item-image-inner {
+        width: 318px;
+        height: 169px;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        opacity: 1;
+        
+    }
+    
+    &__item:first-child &__item-image-inner {
+        width: 345px;
+        height: 369px;
+    }
+
+    &__item-text {
+        margin: 0;
+        padding: 0 40px;
+        text-align: center;
+        line-height: 140%;
+    }
+
+    &__item-box time,
+    &__item-box a {
+        display: none;
+    }
+
+    &__item:first-child &__item-box {
+        margin-left: 345px;
+        padding-left: 75px;
+        padding-right: 20px;
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        flex-direction: column;
+        text-align: left;
+    }
+
+    &__item:first-child &__item-box time {
+        display: block;
+        align-self: start;
+        color: #656565;
+        text-transform: uppercase;
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
+
+    &__item:first-child &__item-text {
+        text-align: left;
+        padding: 0;
+    }
+
+    &__item:first-child &__item-image-wrapper::before {
+        opacity: 0;
+    }
+}
+
+@media (max-width: 1148px) {
+    .events {
+        &__content {
+            margin: 0 auto;
+            flex-direction: row;
+            max-width: 779px;
+            justify-content: space-between;
+            height: 600px;
+        }
+    }
+}
+
+@media (max-width: 681px) {
+    .events {
+        &__content {
+            height: 600px;
+            justify-content: center;
+        }
+
+        &__item {
+            &:first-child {
+                box-shadow: none;
+                width: 318px;
+                height: 169px;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: cover;
+
+                position: relative;
+            }
+        }
+
+        &__item:first-child &__item-box {
+            margin-left: 0;
+            padding-left: 0;
+            padding-right: 0;
+            display: flex;
+            justify-content: center;
+            height: 100%;
+            flex-direction: column;
+            text-align: left;
+        }
+    
+        &__item:first-child &__item-box time {
+            display: none;
+        }
+    
+        &__item:first-child &__item-text {
+            margin: 0;
+            padding: 0 40px;
+            text-align: center;
+            line-height: 140%;
+            color: $white;
+            z-index: 2;
+        }
+    
+        &__item:first-child &__item-image-wrapper::before {
+            position: absolute;
+            content: "";
+
+            width: 100%;
+            height: 100%;
+
+            top: 0;
+            left: 0;
+
+            background-color: #3D2B2B;
+            opacity: 0.65;
+        }
+        
+        &__item:first-child &__item-image-inner {
+            width: 318px;
+            height: 169px;
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            opacity: 1;
+        }
+    }
+}

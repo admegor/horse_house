@@ -18,6 +18,10 @@ body {
     color: $dark;
 }
 
+body.lock {
+    overflow: hidden;
+}
+
 img {
     max-width: 100%;
     height: auto;
@@ -58,6 +62,11 @@ img {
 .button-main:hover {
     background-color: $red;
     color: $white;
+}
+
+.button-categories {
+    color: $red;
+    text-transform: uppercase;
 }
 
 
