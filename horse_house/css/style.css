@@ -531,6 +531,7 @@ body {
   font-weight: 400;
   font-style: normal;
   color: #424242;
+  position: relative;
 }
 
 body.lock {
@@ -699,10 +700,10 @@ img {
 }
 
 .header {
-  position: absolute;
+  position: fixed;
   height: 110px;
   width: 100%;
-  z-index: 100;
+  z-index: 10000;
 }
 
 .header__logo {
@@ -855,11 +856,11 @@ img {
   height: 100vh;
   width: 100%;
   background-color: rgba(255, 255, 255, 0.6);
-  -webkit-backdrop-filter: blur(8px);
-          backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
 }
 
-.header__nav-wrapper--show {
+.header__nav-wrapper.open {
   visibility: visible;
   z-index: 2;
 }
@@ -867,9 +868,9 @@ img {
 .header__nav {
   visibility: hidden;
   opacity: 0;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .header__nav ul li {
@@ -932,33 +933,6 @@ img {
   -webkit-transition-delay: 0.3s;
        -o-transition-delay: 0.3s;
           transition-delay: 0.3s;
-  -webkit-transform: translateX(0px);
-      -ms-transform: translateX(0px);
-          transform: translateX(0px);
-}
-
-.header__nav ul li:nth-child(7) {
-  -webkit-transition-delay: 0.35s;
-       -o-transition-delay: 0.35s;
-          transition-delay: 0.35s;
-  -webkit-transform: translateX(0px);
-      -ms-transform: translateX(0px);
-          transform: translateX(0px);
-}
-
-.header__nav ul li:nth-child(8) {
-  -webkit-transition-delay: 0.4s;
-       -o-transition-delay: 0.4s;
-          transition-delay: 0.4s;
-  -webkit-transform: translateX(0px);
-      -ms-transform: translateX(0px);
-          transform: translateX(0px);
-}
-
-.header__nav ul li:nth-child(9) {
-  -webkit-transition-delay: 0.45s;
-       -o-transition-delay: 0.45s;
-          transition-delay: 0.45s;
   -webkit-transform: translateX(0px);
       -ms-transform: translateX(0px);
           transform: translateX(0px);
@@ -1044,7 +1018,6 @@ img {
 .about-us {
   position: relative;
   margin-bottom: 120px;
-  overflow: hidden;
 }
 
 .about-us::before {
