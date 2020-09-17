@@ -57,6 +57,12 @@ $(document).ready(function() {
       cssEase: 'linear',
   });
 
+    $('.feedback__slider').slick({
+      arrows: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+  });
+
     $('.gallery__slider').slick({
       centerMode: true,
       centerPadding: '60px',
@@ -70,8 +76,7 @@ $(document).ready(function() {
           settings: {
             centerMode: false,
             slidesToShow: 1,
-            arrows: false,
-            dots: true,
+            dots: false,
           }
         }
       ]
