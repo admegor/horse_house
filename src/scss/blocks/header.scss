@@ -152,7 +152,6 @@
       }
 }
 
-
 .header__nav-inner {
     padding: 85px 0;
     height: 100%;
@@ -191,4 +190,33 @@
 
  .current-menu-item a {
     color: $red;
+}
+
+.header__social-list {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.header__social-list li + li {
+    margin-left: 45px;
+}
+
+.header__social-list a {
+    text-decoration: none;
+    color: $grey;
+    transition: 0.3s;
+}
+
+.header__social-list li:hover {
+    transform: translateY(-3px);
+    transition: 0.3s;
+}
+
+@media (max-width: 600px) {
+    .header__social-wrapper {
+        display: none;
+    }
 }

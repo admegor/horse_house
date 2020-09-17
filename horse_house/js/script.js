@@ -1,3 +1,9 @@
+$(window).on('load', function () {
+    $preloader = $('.loaderArea'),
+        $loader = $preloader.find('.loader');
+    $loader.fadeOut();
+    $preloader.delay(350).fadeOut('slow');
+});;
 function testWebP(callback) {
 
     var webP = new Image();
@@ -54,11 +60,21 @@ $(document).ready(function() {
     $('.gallery__slider').slick({
       centerMode: true,
       centerPadding: '60px',
-      arrows: false,
       slidesToShow: 3,
       slidesToScroll: 1,
       variableWidth: true,
-      adaptiveHeight: true
+      adaptiveHeight: true,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            centerMode: false,
+            slidesToShow: 1,
+            arrows: false,
+            dots: true,
+          }
+        }
+      ]
   });
 });;
 $(document).on('click','.about-us__videoPoster',function(e) {

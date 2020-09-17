@@ -35,10 +35,20 @@ $(document).ready(function() {
     $('.gallery__slider').slick({
       centerMode: true,
       centerPadding: '60px',
-      arrows: false,
       slidesToShow: 3,
       slidesToScroll: 1,
       variableWidth: true,
-      adaptiveHeight: true
+      adaptiveHeight: true,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            centerMode: false,
+            slidesToShow: 1,
+            arrows: false,
+            dots: true,
+          }
+        }
+      ]
   });
 });
